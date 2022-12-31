@@ -10,6 +10,35 @@ import Star6 from "../components/star6";
 import Countdown from "react-countdown";
 
 export default function Index() {
+  const renderer = ({ days, hours, minutes, seconds, completed }) => {
+    if (completed) {
+      return <div>новый год прошёл</div>;
+    } else {
+      return (
+        <div className=" place-self-center pt-2 w-full">
+          <h2 className="xl:text-sm text-xs text-center ">До нового года осталось:</h2>
+          <span className=" flex justify-center gap-1 font-bold text-xs flex-row">
+            <div className="flex-col  p-2 bg-[#222327] rounded-2xl">
+              <div>{days}</div>
+              <div>дня</div>
+            </div>
+            <div className="flex-col p-2 bg-[#222327] rounded-2xl">
+              <div>{hours}</div>
+              <div>часа</div>
+            </div>
+            <div className="flex-col p-2 bg-[#222327] rounded-2xl">
+              <div>{minutes}</div>
+              <div>минуты</div>
+            </div>
+            <div className="flex-col p-2 bg-[#222327] rounded-2xl">
+              <div>{seconds}</div>
+              <div>секунды</div>
+            </div>
+          </span>
+        </div>
+      );
+    }
+  };
   return (
     <div>
       {/* <img src="1.png" alt="tailwind logo" className=""/> */}
@@ -37,24 +66,35 @@ export default function Index() {
           />
         </div>
 
-        <div className="col-span-2 col-start-4 row-start-3 rounded-3xl bg-yellow-400/75 shadow-2xl shadow-[#FFD700] hover:scale-125 xl:hover:scale-125 lg:hover:scale-125 md:hover:scale-125 transition-all transform duration-500"></div>
+        <div className="col-span-2 col-start-4 row-start-3 rounded-3xl bg-yellow-400/75 shadow-2xl shadow-[#FFD700] hover:scale-125 xl:hover:scale-125 lg:hover:scale-125 md:hover:scale-125 transition-all transform duration-500">
+        <h1 className="text-center text-2xl pt-16">
+            <font color=".8135L13" face="Playball">
+              Александр Лада поздравляет всех с новым годом!
+            </font>
+          </h1>
+          
+        </div>
 
-        <div className="col-span-2 col-start-1 row-start-4 rounded-3xl bg-yellow-400/75 shadow-2xl shadow-[#FFD700] hover:scale-125 xl:hover:scale-125 lg:hover:scale-125 md:hover:scale-125 transition-all transform duration-500"></div>
-        <Countdown date={"2023-01-01T00:00:00"}>
-          <div></div>
+        <div className="col-span-3 col-start-1 row-start-4 rounded-3xl bg-yellow-400/75 shadow-2xl shadow-[#FFD700] hover:scale-125 xl:hover:scale-125 lg:hover:scale-125 md:hover:scale-125 transition-all transform duration-500">
+        <Countdown date={"2023-01-01T00:00:00"} renderer={renderer}>
         </Countdown>
 
-        <div className="col-span-3 col-start-3 row-start-4 rounded-3xl bg-yellow-400/75 shadow-2xl shadow-[#FFD700] hover:scale-125 xl:hover:scale-125 lg:hover:scale-125 md:hover:scale-125 transition-all transform duration-500">
-          <h1 className=" flex justify-evenly drop-shadow-2xl shadow-black">
+        <img src="ph.png" alt="photo" className="w-24 rounded-3xl mx-auto shadow-2xl shadow-[#191970]"/>
+        </div>
+        
+
+        <div className="col-span-2 col-start-4 row-start-4 rounded-3xl bg-yellow-400/75 shadow-2xl shadow-[#FFD700] hover:scale-125 xl:hover:scale-125 lg:hover:scale-125 md:hover:scale-125 transition-all transform duration-500">
+          <h1 className="flex justify-evenly drop-shadow-2xl shadow-black">
             <font color="#6A5ACD" face="Playball">
               И на эту
             </font>
           </h1>
           <img
-            className="rounded-t-3xl rounded-3xl mx-auto p-0 scale-50 hover:scale-150 xl:hover:scale-125 lg:hover:scale-125 md:hover:scale-125 sm:hover:scale-150 transition-all transform duration-700"
+            className="rounded-t-3xl rounded-3xl mx-auto p-0 mb-2 scale-100 hover:scale-150 xl:hover:scale-125 lg:hover:scale-125 md:hover:scale-125 sm:hover:scale-150 transition-all transform duration-700"
             src="ph4.png"
             alt="photo"
           />
+          
         </div>
         <img
           className="col-start-5 row-start-1 w-44"
