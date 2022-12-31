@@ -1,5 +1,15 @@
+import Layout from '../components/Layout'
 import '../styles/globals.css'
+import Snowfall from 'react-snowfall'
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }) =>(
+  <Layout>
+    <Component {...pageProps}/>
+    <Snowfall/>
+  </Layout>
+
+)
+
+export default MyApp;
+
+
