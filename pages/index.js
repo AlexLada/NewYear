@@ -8,6 +8,8 @@ import Star4 from "../components/star4";
 import Star5 from "../components/star5";
 import Star6 from "../components/star6";
 import Countdown from "react-countdown";
+import React from "react";
+
 
 export default function Index() {
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -39,6 +41,7 @@ export default function Index() {
       );
     }
   };
+
   return (
     <div>
       {/* <img src="1.png" alt="tailwind logo" className=""/> */}
