@@ -9,7 +9,9 @@ module.exports = {
       fontFamily:{
         'Rubik':'Rubik Distressed',
         'Playball':'Playball Distressed'
-       }
+       },
+       
+      
     },
   },
   plugins: [],
